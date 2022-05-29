@@ -1,0 +1,59 @@
+<Layout_>: 
+    name:'reg'
+    ScrollView: 
+        size:self.size 
+        
+        GridLayout: 
+            size_hint_y: None 
+            #size_hint_y: None 
+            height: self.minimum_height 
+            width:self.minimum_width 
+            cols:1 
+            spacing:"40dp" 
+            padding:"20dp"
+
+            MDLabel:
+                text:'Criminal Registration'
+                font_name:"Poppins-SemiBold.ttf"
+                font_size:"25sp"
+                halign:'center'
+                pos_hint: {'center_y':0.8}
+             
+            
+         
+            MDCard: 
+                orientation:"vertical" 
+                size_hint:1,None 
+                padding:"8dp" 
+                height:"256dp" 
+                evaluation:5 
+                border_radius:20 
+                radius:[15] 
+                background: "Temp-256x256.jpg"
+                #on_press: root.test(self)
+                
+            MDCard: 
+                id:criminal_name
+                orientation:"vertical" 
+                size_hint:1,None 
+                padding:"8dp" 
+                height:"100dp" 
+                elevation: 36
+                border_radius:20 
+                radius:[15] 
+                  
+                Label:
+                    text:"Criminal Name"
+                    font_size:"20sp"
+                    color: 0,0,0,1
+                TextInput:
+                    helper_text:'Required'
+                    helper_text_mode:  'on_error'
+                    mutiline:False
+
+            MDRaisedButton:
+                text:'Submit'
+                size_hint: (0.13,0.07)
+                pos_hint: {'center_x':0.5,'center_y':0.2}
+                on_press:
+                    app.login()

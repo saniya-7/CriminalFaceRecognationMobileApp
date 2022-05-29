@@ -1,0 +1,37 @@
+<Layout_>:  
+    ScrollView:  
+        size:self.size  
+          
+        GridLayout:  
+            md_bg_color:0,0,0,1  
+            size_hint_y: None  
+            height: self.minimum_height  
+            width:self.minimum_width  
+            cols:1  
+            spacing:"20dp"  
+            padding:"20dp"  
+  
+            MDCard:  
+                orientation:"vertical"  
+                size_hint:1,None  
+                padding:"8dp"  
+                height:"210dp"  
+                evaluation:5  
+                border_radius:20  
+                radius:[15]  
+                Video: 
+                    source: "../src/video/test_video.mp4" 
+            
+            MDCard:  
+                id:card_2
+                orientation:"vertical"  
+                size_hint:1,None  
+                padding:"8dp"  
+                height:"210dp"  
+                evaluation:5  
+                border_radius:20  
+                radius:[15]  
+                # background: "login bg.jpg"    
+                on_press: root.start_stream(self)
+                
+
