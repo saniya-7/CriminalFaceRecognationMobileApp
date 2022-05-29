@@ -7,7 +7,7 @@ from kivymd.uix.button import MDFlatButton
 from kivymd.uix.dialog import MDDialog
 import requests
 from kivy.core.window import Window
-# Window.size = (500, 700)
+
 Window.size = (400 , 667)
 
 
@@ -32,7 +32,6 @@ ScreenManager:
 
         MDLabel:
             text:"Sensing"
-            #post_hint: {"center_x":.9,"center_y":.3}
             halign:"center"
             theme_text_color:"Custom"
             text_color:1,1,1,1
@@ -71,6 +70,7 @@ ScreenManager:
         helper_text:'Required'
         helper_text_mode:  'on_error'
         icon_right: 'eye'
+        password:True
         icon_right_color: app.theme_cls.primary_color
         required: True
         mode: "rectangle"
@@ -126,6 +126,7 @@ ScreenManager:
         pos_hint: {'center_y':0.4,'center_x':0.5}
         size_hint : (0.7,0.1)
         hint_text: 'Password'
+        password:True
         helper_text:'Required'
         helper_text_mode:  'on_error'
         icon_right: 'eye'
